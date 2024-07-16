@@ -1,0 +1,46 @@
+<style>
+    div {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        flex-direction: row;
+        background-color: yellow;
+        border: 3pt solid red;
+        /* text-decoration: wavy; */
+        font-size: xx-large;
+    }
+    div:hover {
+        background-color: yellowgreen;
+        font-size: x-large;
+        border: 3px dashed #ff8000;
+        text-decoration: saddlebrown;
+    }
+    d-hovered {
+        background-color: green;
+        font-size: x-large;
+        border: 3px dashed #fd2000;
+        text-decoration: darkolivegreen;
+    }
+
+    button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  font-size: 3em;
+}
+
+    played-x {
+        background-color: red;
+        content: 'X';
+    }
+    played-y {
+        background-color: blueviolet;
+    }
+</style>
+
+<div class=" button-content ">
+    <button *ngIf="value_==='O'" [ngClass]="'d-hovered'"> O  </button>
+    <button *ngIf="value_==='X'" [ngClass]="'played-x'"> X  </button>
+    <button *ngIf="value_==='Y'" [ngClass]="'played-y'"> Y  </button>
+</div>
